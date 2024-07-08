@@ -7,8 +7,12 @@ var surface = FastNoiseLite.new()
 func _ready():
 	surface.seed = randi()
 	surface.noise_type = FastNoiseLite.TYPE_PERLIN
-	for x in range(0,100):
-		tilemap.set_cell(0,Vector2i(x,10+int(surface.get_noise_1d(x)*5)),0,Vector2i(0,0))
+	surface.frequency = 0.005
+	for x in range(0,215):
+		if(x<50):
+			tilemap.set_cell(0,Vector2i(x,50+int(surface.get_noise_1d(x)*50)),0,Vector2i(0,0))
+		else:
+			tilemap.set_cell(0,Vector2i(x,50+int(surface.get_noise_1d(x)*100)),0,Vector2i(0,0))
 		#tilemap.set_cell(0,Vector2i(x,10),0,Vector2i(0,0))
 
 
