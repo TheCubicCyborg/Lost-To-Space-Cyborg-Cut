@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://7on6go48oawv"]
+[gd_scene load_steps=5 format=3 uid="uid://7on6go48oawv"]
 
 [ext_resource type="Texture2D" uid="uid://cd7vlayd31r3t" path="res://Assets/TileSheets/overlay_tilesheet.png" id="1_p878d"]
+[ext_resource type="Script" path="res://Modules/WorldGen/world_generator.gd" id="1_xi8eb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lb5j5"]
 texture = ExtResource("1_p878d")
@@ -44,6 +45,7 @@ texture = ExtResource("1_p878d")
 sources/0 = SubResource("TileSetAtlasSource_lb5j5")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_xi8eb")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bfe6w")
