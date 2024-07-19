@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://752b7agubln7"]
+
+[ext_resource type="Script" path="res://Modules/Inventory/inventory_system.gd" id="1_5cmg2"]
+[ext_resource type="PackedScene" uid="uid://ba5hi5kyx0tkf" path="res://Modules/Inventory/inventory_gui.tscn" id="2_dj0e5"]
+
+[node name="Inventory_System" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5cmg2")
+
+[node name="Inventory_GUI" parent="." instance=ExtResource("2_dj0e5")]
+layout_mode = 1

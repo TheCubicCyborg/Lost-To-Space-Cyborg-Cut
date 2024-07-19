@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btlc6p31ngv1i"]
 
-[ext_resource type="Texture2D" uid="uid://bct565f1o8v8g" path="res://Assets/Sprites/inventory_slot.png" id="1_kvbmh"]
-[ext_resource type="Script" path="res://inventory_slot.gd" id="1_nvl4g"]
+[ext_resource type="Script" path="res://Modules/Inventory/inventory_slot.gd" id="1_eu461"]
+[ext_resource type="Texture2D" uid="uid://bct565f1o8v8g" path="res://Assets/Sprites/inventory_slot.png" id="2_w2q4f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yu16"]
 
@@ -11,7 +11,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_4yu16")
-script = ExtResource("1_nvl4g")
+script = ExtResource("1_eu461")
 
 [node name="slot_icon" type="TextureRect" parent="."]
 texture_filter = 1
@@ -19,6 +19,6 @@ layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
 mouse_filter = 2
-texture = ExtResource("1_kvbmh")
+texture = ExtResource("2_w2q4f")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
