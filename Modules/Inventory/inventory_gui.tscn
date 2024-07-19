@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba5hi5kyx0tkf"]
+
+[ext_resource type="Texture2D" uid="uid://doq2vk6ueghb6" path="res://Assets/Sprites/inventory-ninepatachrect.png" id="1_ljmk4"]
+[ext_resource type="Script" path="res://Modules/Inventory/inventory_gui.gd" id="1_po67h"]
+
+[node name="Inventory_GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_po67h")
+rows = 4
+cols = 10
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 6.0
+offset_bottom = 6.0
+texture = ExtResource("1_ljmk4")
+region_rect = Rect2(0, 0, 9, 9)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = 67.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
